@@ -56,7 +56,7 @@ const App = () => {
         } else setRepList(res.results);
     };
     return (
-        <div className="App">
+        <div className="app">
             <Header />
             <div className="search-cont">
                 <DropDown options={repTypes} handleChange={handleDropdown} />
