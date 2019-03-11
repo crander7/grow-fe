@@ -1,0 +1,36 @@
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F8F9;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.list-header > h4 {
+    padding: 0 20px;
+    font-weight: lighter;
+    margin-right: 80px;
+}
+
+.list-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.list-data > h4 {
+    font-weight: normal;
+    margin-right: 80px;
+    text-align: left;
+}
+
+.list-cont {
+    width: 50%;
+    margin-right: 15px;
+    margin-left: 30px;
+}
+
+.scroll {
+    height: 470px;
+    overflow: overlay;
+}

@@ -1,0 +1,39 @@
+.data-disp {
+  display: flex;
+  justify-content: center;
+}
+
+.search-cont {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+button {
+  background: #15A7EA;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 5rem;
+  border: none;
+  height: 2rem;
+}
+
+button:hover {
+  background-color: #346392
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.blue {
+  color: #15A7EA;
+}
+
+.thin {
+  font-weight: lighter;
+  text-align: left;
+}
