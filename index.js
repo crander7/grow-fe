@@ -42,7 +42,6 @@ function handleApiResponse(res, next) {
       };
       return next();
     }
-    console.log(body);
     res.locals = {
       success: true,
       results: JSON.parse(body).results
