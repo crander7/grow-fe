@@ -25,3 +25,7 @@ yarn start will start the project with pm2. PM2 is similar to forever, it will k
 yarn stop or yarn end
 ```
 yarn stop will stop the process. yarn end will stop it and delete it from pm2.
+
+## Usage
+In dev mode it is accessible from http://localhost:3000
+In production it is accessible from http://localhost:3001
