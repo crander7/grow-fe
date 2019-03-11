@@ -1,5 +1,6 @@
+/* eslint no-alert: 0 */
 import React, { useState } from 'react';
-import DropDown from '../Dropdown/Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 import Header from '../Header/Header';
 import RepDetails from '../RepDetails/RepDetails';
 import RepsList from '../RepList/RepList';
@@ -37,8 +38,8 @@ const App = () => {
         if (noSenator && type === 'senators') {
             let name;
             territories.forEach((t) => {
-                if (t.shortCode === selectedState) name = t.name;
-            })
+                if (t.shortCode === selectedState) ({ name } = t);
+            });
             return alert(`${name} has no Senators. Try searching representatives instead.`);
         }
         let error;
@@ -51,16 +52,18 @@ const App = () => {
         }
         if (error) {
             alert('Sorry we couldn\'t make you request at this time');
-           setRepList([]);
-           setActiveRep({});
-        } else setRepList(res.results);
+            setRepList([]);
+            return setActiveRep({});
+        }
+        return setRepList(res.results);
     };
+
     return (
         <div className="app">
             <Header />
             <div className="search-cont">
-                <DropDown options={repTypes} handleChange={handleDropdown} />
-                <DropDown options={states} handleChange={handleDropdown} />
+                <Dropdown options={repTypes} handleChange={handleDropdown} />
+                <Dropdown options={states} handleChange={handleDropdown} />
                 <button
                     className="pointer"
                     type="button"

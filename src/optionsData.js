@@ -4,243 +4,243 @@ export const territories = [
     { shortCode: 'AS', name: 'American Samoa' },
     { shortCode: 'GU', name: 'Guam' },
     { shortCode: 'MP', name: 'Northern Mariana Islands' },
-    { shortCode: 'VI', name: 'Virgin Islands' }
+    { shortCode: 'VI', name: 'Virgin Islands' },
 ];
 
 export const states = [
     {
-        name: "Alabama",
-        id: "AL"
+        name: 'Alabama',
+        id: 'AL',
     },
     {
-        name: "Alaska",
-        id: "AK"
+        name: 'Alaska',
+        id: 'AK',
     },
     {
-        name: "American Samoa",
-        id: "AS"
+        name: 'American Samoa',
+        id: 'AS',
     },
     {
-        name: "Arizona",
-        id: "AZ"
+        name: 'Arizona',
+        id: 'AZ',
     },
     {
-        name: "Arkansas",
-        id: "AR"
+        name: 'Arkansas',
+        id: 'AR',
     },
     {
-        name: "California",
-        id: "CA"
+        name: 'California',
+        id: 'CA',
     },
     {
-        name: "Colorado",
-        id: "CO"
+        name: 'Colorado',
+        id: 'CO',
     },
     {
-        name: "Connecticut",
-        id: "CT"
+        name: 'Connecticut',
+        id: 'CT',
     },
     {
-        name: "Delaware",
-        id: "DE"
+        name: 'Delaware',
+        id: 'DE',
     },
     {
-        name: "District Of Columbia",
-        id: "DC"
+        name: 'District Of Columbia',
+        id: 'DC',
     },
     {
-        name: "Florida",
-        id: "FL"
+        name: 'Florida',
+        id: 'FL',
     },
     {
-        name: "Georgia",
-        id: "GA"
+        name: 'Georgia',
+        id: 'GA',
     },
     {
-        name: "Guam",
-        id: "GU"
+        name: 'Guam',
+        id: 'GU',
     },
     {
-        name: "Hawaii",
-        id: "HI"
+        name: 'Hawaii',
+        id: 'HI',
     },
     {
-        name: "Idaho",
-        id: "ID"
+        name: 'Idaho',
+        id: 'ID',
     },
     {
-        name: "Illinois",
-        id: "IL"
+        name: 'Illinois',
+        id: 'IL',
     },
     {
-        name: "Indiana",
-        id: "IN"
+        name: 'Indiana',
+        id: 'IN',
     },
     {
-        name: "Iowa",
-        id: "IA"
+        name: 'Iowa',
+        id: 'IA',
     },
     {
-        name: "Kansas",
-        id: "KS"
+        name: 'Kansas',
+        id: 'KS',
     },
     {
-        name: "Kentucky",
-        id: "KY"
+        name: 'Kentucky',
+        id: 'KY',
     },
     {
-        name: "Louisiana",
-        id: "LA"
+        name: 'Louisiana',
+        id: 'LA',
     },
     {
-        name: "Maine",
-        id: "ME"
+        name: 'Maine',
+        id: 'ME',
     },
     {
-        name: "Maryland",
-        id: "MD"
+        name: 'Maryland',
+        id: 'MD',
     },
     {
-        name: "Massachusetts",
-        id: "MA"
+        name: 'Massachusetts',
+        id: 'MA',
     },
     {
-        name: "Michigan",
-        id: "MI"
+        name: 'Michigan',
+        id: 'MI',
     },
     {
-        name: "Minnesota",
-        id: "MN"
+        name: 'Minnesota',
+        id: 'MN',
     },
     {
-        name: "Mississippi",
-        id: "MS"
+        name: 'Mississippi',
+        id: 'MS',
     },
     {
-        name: "Missouri",
-        id: "MO"
+        name: 'Missouri',
+        id: 'MO',
     },
     {
-        name: "Montana",
-        id: "MT"
+        name: 'Montana',
+        id: 'MT',
     },
     {
-        name: "Nebraska",
-        id: "NE"
+        name: 'Nebraska',
+        id: 'NE',
     },
     {
-        name: "Nevada",
-        id: "NV"
+        name: 'Nevada',
+        id: 'NV',
     },
     {
-        name: "New Hampshire",
-        id: "NH"
+        name: 'New Hampshire',
+        id: 'NH',
     },
     {
-        name: "New Jersey",
-        id: "NJ"
+        name: 'New Jersey',
+        id: 'NJ',
     },
     {
-        name: "New Mexico",
-        id: "NM"
+        name: 'New Mexico',
+        id: 'NM',
     },
     {
-        name: "New York",
-        id: "NY"
+        name: 'New York',
+        id: 'NY',
     },
     {
-        name: "North Carolina",
-        id: "NC"
+        name: 'North Carolina',
+        id: 'NC',
     },
     {
-        name: "North Dakota",
-        id: "ND"
+        name: 'North Dakota',
+        id: 'ND',
     },
     {
-        name: "Northern Mariana Islands",
-        id: "MP"
+        name: 'Northern Mariana Islands',
+        id: 'MP',
     },
     {
-        name: "Ohio",
-        id: "OH"
+        name: 'Ohio',
+        id: 'OH',
     },
     {
-        name: "Oklahoma",
-        id: "OK"
+        name: 'Oklahoma',
+        id: 'OK',
     },
     {
-        name: "Oregon",
-        id: "OR"
+        name: 'Oregon',
+        id: 'OR',
     },
     {
-        name: "Pennsylvania",
-        id: "PA"
+        name: 'Pennsylvania',
+        id: 'PA',
     },
     {
-        name: "Puerto Rico",
-        id: "PR"
+        name: 'Puerto Rico',
+        id: 'PR',
     },
     {
-        name: "Rhode Island",
-        id: "RI"
+        name: 'Rhode Island',
+        id: 'RI',
     },
     {
-        name: "South Carolina",
-        id: "SC"
+        name: 'South Carolina',
+        id: 'SC',
     },
     {
-        name: "South Dakota",
-        id: "SD"
+        name: 'South Dakota',
+        id: 'SD',
     },
     {
-        name: "Tennessee",
-        id: "TN"
+        name: 'Tennessee',
+        id: 'TN',
     },
     {
-        name: "Texas",
-        id: "TX"
+        name: 'Texas',
+        id: 'TX',
     },
     {
-        name: "Utah",
-        id: "UT"
+        name: 'Utah',
+        id: 'UT',
     },
     {
-        name: "Vermont",
-        id: "VT"
+        name: 'Vermont',
+        id: 'VT',
     },
     {
-        name: "Virgin Islands",
-        id: "VI"
+        name: 'Virgin Islands',
+        id: 'VI',
     },
     {
-        name: "Virginia",
-        id: "VA"
+        name: 'Virginia',
+        id: 'VA',
     },
     {
-        name: "Washington",
-        id: "WA"
+        name: 'Washington',
+        id: 'WA',
     },
     {
-        name: "West Virginia",
-        id: "WV"
+        name: 'West Virginia',
+        id: 'WV',
     },
     {
-        name: "Wisconsin",
-        id: "WI"
+        name: 'Wisconsin',
+        id: 'WI',
     },
     {
-        name: "Wyoming",
-        id: "WY"
-    }
+        name: 'Wyoming',
+        id: 'WY',
+    },
 ];
 
 export const repTypes = [
     {
-        name: "Senator",
-        id: 0
+        name: 'Senator',
+        id: 0,
     },
     {
-        name: "Representative",
-        id: 1
-    }
+        name: 'Representative',
+        id: 1,
+    },
 ];

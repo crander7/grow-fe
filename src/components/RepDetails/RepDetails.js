@@ -7,6 +7,8 @@ const parseName = (name, type) => {
     return name.split(' ').reduce((acc, n, idx) => (idx > 0 ? `${acc} ${n}` : ''), '');
 };
 
+const renderDistrict = (district, repType) => (repType === 'representatives' ? `: ${district}` : ': N/A');
+
 const RepDetails = ({ rep, repType }) => (
     <div className="detail-cont">
         <h1 className="thin">
@@ -34,9 +36,7 @@ const RepDetails = ({ rep, repType }) => (
             <h4>
                 District
                 {rep.name
-                    ? repType === 'representatives'
-                        ? `: ${rep.district}`
-                        : ': N/A'
+                    ? renderDistrict(rep.district, repType)
                     : ''
                 }
             </h4>
@@ -80,12 +80,18 @@ const RepDetails = ({ rep, repType }) => (
 
 RepDetails.defaultProps = {
     rep: {},
-    repType: null
-}
+    repType: null,
+};
 
 RepDetails.propTypes = {
-    rep: PropTypes.object,
-    repType: PropTypes.string
+    rep: PropTypes.objectOf({
+        name: PropTypes.string,
+        district: PropTypes.oneOfType([undefined, PropTypes.string]),
+        phone: PropTypes.string,
+        office: PropTypes.string,
+        link: PropTypes.string,
+    }),
+    repType: PropTypes.string,
 };
 
 export default RepDetails;

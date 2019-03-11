@@ -9,7 +9,7 @@ const DropDown = ({ options, handleChange }) => (
             onChange={(e) => { handleChange(e.target.value); }}
         >
             <option value="" />
-            {options.map((option) =>
+            {options.map(option => (
                 <option
                     className="highlight"
                     value={option.id}
@@ -17,14 +17,14 @@ const DropDown = ({ options, handleChange }) => (
                 >
                     {option.name}
                 </option>
-            )}
+            ))}
         </select>
     </div>
 );
 
 DropDown.propTypes = {
-    options: PropTypes.array.isRequired,
-    handleChange: PropTypes.func.isRequired
+    options: PropTypes.arrayOf(PropTypes.object).isRequired,
+    handleChange: PropTypes.func.isRequired,
 };
 
 export default DropDown;

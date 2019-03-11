@@ -4,8 +4,8 @@ import './Header.scss';
 const Header = () => (
     <div className="header">
         <h1>
-            Who's My Representative?
-        </h1> 
+            {'Who\'s My Representative?'}
+        </h1>
     </div>
 );
 
