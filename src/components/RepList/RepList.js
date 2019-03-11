@@ -25,7 +25,7 @@ const RepList = ({ reps, showDetails }) => (
                         {rep.name}
                     </div>
                     <h4>
-                        {rep.party}
+                        {rep.party.substring(0, 1)}
                     </h4>
                 </div>
             ))}

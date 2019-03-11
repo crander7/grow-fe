@@ -25,6 +25,16 @@
                 font-weight: normal;
                 margin-right: 80px;
                 text-align: left;
+                display: block;
+                margin-block-start: 1.33em;
+                margin-block-end: 1.33em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+            > h4 {
+                font-weight: normal;
+                margin-right: 107px;
+                text-align: left;
             }
         }
     }
