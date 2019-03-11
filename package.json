@@ -7,7 +7,14 @@
     "dev": "concurrently \"yarn server\" \"yarn client\"",
     "server": "NODE_ENV=development nodemon index.js",
     "client": "react-scripts start",
-    "start": "NODE_ENV=production node index.js",
+    "start-local": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production pm2 start index.js --name grow-fe",
+    "show-all": "pm2 list",
+    "show": "pm2 show grow-fe",
+    "stop": "pm2 stop grow-fe",
+    "delete": "pm2 delete grow-fe",
+    "end": "yarn stop && yarn delete",
+    "restart": "pm2 restart grow-fe",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -15,7 +22,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
@@ -23,6 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "pm2": "^3.3.1"
   },
