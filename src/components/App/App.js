@@ -1,56 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import DropDown from '../Dropdown/Dropdown';
 import Header from '../Header/Header';
 import RepDetails from '../RepDetails/RepDetails';
 import RepsList from '../RepList/RepList';
 import { states, repTypes, territories } from '../../optionsData';
-
 import './App.scss';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeRep: {},
-            type: '',
-            selectedState: '',
-            noSenator: false,
-            repList: []
-        }
-    }
+const App = () => {
+    const [activeRep, setActiveRep] = useState({});
+    const [type, setType] = useState('');
+    const [selectedState, setSelectedState] = useState('');
+    const [noSenator, setNoSenator] = useState(false);
+    const [repList, setRepList] = useState([]);
 
-    handleDropdown = (selection) => {
+    const handleDropdown = (selection) => {
         if (selection.length === 1) {
-            const type = Number(selection) ? 'representatives' : 'senators';
-            this.setState({
-                type,
-                repList: [],
-                activeRep: {}
-            });
+            setType(Number(selection) ? 'representatives' : 'senators');
         } else {
-            const selectedState = selection;
-            const noSenator = territories.some(st => st.shortCode === selection);
-            this.setState({
-                selectedState,
-                noSenator,
-                repList: [],
-                activeRep: {}
-            });
+            setSelectedState(selection);
+            setNoSenator(territories.some(st => st.shortCode === selection));
         }
-    }
+        setRepList([]);
+        setActiveRep({});
+    };
 
-    handleRepSelect = (selection) => {
-        const { repList } = this.state;
-        let activeRep = null;
+    const handleRepSelect = (selection) => {
+        let rep = null;
         repList.forEach((r) => {
-            if (r.name === selection) activeRep = r;
+            if (r.name === selection) rep = r;
         });
-        console.log('re', activeRep);
-        this.setState({ activeRep });
-    }
+        setActiveRep(rep);
+    };
 
-    handleSubmit = async () => {
-        const { type, selectedState, noSenator } = this.state;
+    const handleSubmit = async () => {
         if (!type || !selectedState) return alert('You must select a representative type and state!');
         if (noSenator && type === 'senators') {
             let name;
@@ -69,38 +51,30 @@ class App extends Component {
         }
         if (error) {
             alert('Sorry we couldn\'t make you request at this time');
-            return this.setState({ repList: [], activeRep: {} });
-        }
-        this.setState({ repList: res.results });
-    }
-
-    render() {
-        const {
-            type,
-            activeRep,
-            repList
-        } = this.state;
-        return (
-            <div className="App">
-                <Header />
-                <div className="search-cont">
-                    <DropDown options={repTypes} handleChange={this.handleDropdown} />
-                    <DropDown options={states} handleChange={this.handleDropdown} />
-                    <button
-                        className="pointer"
-                        type="button"
-                        onClick={this.handleSubmit}
-                    >
-                        Submit
-                    </button>
-                </div>
-                <div className="data-disp">
-                    <RepsList reps={repList} showDetails={this.handleRepSelect} />
-                    <RepDetails rep={activeRep} repType={type} />
-                </div>
+           setRepList([]);
+           setActiveRep({});
+        } else setRepList(res.results);
+    };
+    return (
+        <div className="App">
+            <Header />
+            <div className="search-cont">
+                <DropDown options={repTypes} handleChange={handleDropdown} />
+                <DropDown options={states} handleChange={handleDropdown} />
+                <button
+                    className="pointer"
+                    type="button"
+                    onClick={handleSubmit}
+                >
+                    Submit
+                </button>
             </div>
-        );
-    }
-}
+            <div className="data-disp">
+                <RepsList reps={repList} showDetails={handleRepSelect} />
+                <RepDetails rep={activeRep} repType={type} />
+            </div>
+        </div>
+    );
+};
 
 export default App;
