@@ -22,5 +22,6 @@ yarn start will start it in production mode with pm2.
 ## Stopping the Production Server
 yarn start will start the project with pm2. PM2 is similar to forever, it will keep the app alive even if it crashes, but pm2 will let us tag running processes for easier operations.
 ```bash
-yarn stop
+yarn stop or yarn end
 ```
+yarn stop will stop the process. yarn end will stop it and delete it from pm2.
